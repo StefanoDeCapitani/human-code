@@ -1,0 +1,27 @@
+VARIABILI:
+- Strisce pedonali
+- Semaforo
+- Veicoli
+- Pedoni
+
+1. Mi trovo sul marciapiede (INIZIO BLOCCO)
+    1.1 Individuare le strisce pedonali
+        1.1.1 guardare avanti se ci sono strisce
+                TRUE → ci sono, proseguo con il punto 1b
+                FALSE → non ci sono, prosegui sul marciapiede x metri e poi ripeti punto 1.1.1
+    1.2 raggiungere le strisce pedonali
+        1.2.1 camminare verso le strisce
+        1.2.2 fermarsi al raggiungimento
+2. Controllare se c'è il semaforo
+    - FALSE → controllare se arrivano veicoli
+            TRUE → ritorna al punto 2a
+            FALSE → proseguire con il punto 3
+    - TRUE → controllare il colore del semaforo
+            TRUE → il semaforo è verde e posso proseguire il ciclo
+            FALSE → il semaforo non è verde, ritorna al punto 2b
+3. Attraversare la strada
+    3.1 controllare la presenza di altri pedoni
+        TRUE → evitarli
+        FALSE → proseguire
+    3.2 camminare sulle strisce
+4. Arrivo sull'altro lato della strada (FINE BLOCCO)
